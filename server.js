@@ -5,6 +5,24 @@ const {bots, playerRecord} = require('./data')
 const {shuffleArray} = require('./utils')
 
 app.use(express.json())
+app.use(express.static('public'))
+
+/** HTML endpoint */
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+})
+
+/**CSS endpoint */
+app.get('/styles', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.css'))
+})
+
+/**JS endpoint */
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.js'))
+})
+
+
 
 app.get('/api/robots', (req, res) => {
     try {
