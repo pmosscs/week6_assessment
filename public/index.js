@@ -31,7 +31,7 @@ const makeRobotChoiceCard = (bot) => {
         <h4>Health: ${bot.health}</h4>
         <p>Attack 1: ${bot.attacks[0].damage} damage</p>
         <p>Attack 2: ${bot.attacks[1].damage} damage</p>
-        <button class="bot-btn" onclick="chooseBot(${bot.id})">Add to Duo</button>
+        <button id="doesitwork" class="bot-btn" onclick="chooseBot(${bot.id})">Add to Duo</button>
         </div>
     `
 }
